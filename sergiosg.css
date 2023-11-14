@@ -1,0 +1,403 @@
+/*importamos o tipo de letra "bangers" de google fonts. Buscar titorial de como importanr fontes de Google Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*Hacemos un reset a todos os espazos que deixa o navegador por defecto* */
+
+html{	
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 00px;
+	padding: 00px;
+	box-sizing: border-box;
+	background-image: url('img/back.gif');
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* Estilos principais */
+
+
+h2 {
+	font-size: 1.8rem; /*(tamaño 16 pixeles) por 1.8, onde rem=16 pix*/
+	text-align: center;
+	text-transform: uppercase; /*transforma todas as letras de h2 en maísculas*/
+	font-weight: 500; /*ancho da letra*/
+	padding-bottom: 50px; /*deixa un espacio por debaixo de 50px*/
+	font-family: 'Dela Gothic One', sans-serif; /*tipo de letra que importamos de google fonts*/
+	color: #828282;
+}
+
+h3 {
+	font-size: 1.4rem;
+	text-align: center;
+	text-transform: uppercase;
+	padding-bottom: 20px;
+	font-weight: 400;
+	font-family: 'Dela Gothic One', sans-serif;
+	color: #828282;
+}
+
+p {
+	font-size: 1rem;
+	margin: 10px 0; /*marxe superior e inferior de 10px e marxe esquerda e dereita de 0 puntos*/
+	line-height: 1.7em; /*salto de línea*/
+}
+
+a {
+	text-decoration: none;
+} /* enlaces sen a liña que ten por defecto, e decir lle quito a liña*/
+
+/* Utility Classes */
+
+.container {
+	margin: auto; /* 0px de marxen vertical, centrado horizontalmente */
+	max-width: 1300px; /*coloca o ancho de 1300px como valor máximo do container*/
+	overflow: auto;
+	padding: 0 20px; /*crea un espacio en los bordes*/
+}
+
+.large {
+	font-size: 20px;
+}
+
+.texto-contacto{
+	font-size: 16px;
+}
+
+.medium{
+	font-size: 19px;
+}
+
+.btn {
+	display: inline-block;
+	font-size: 15px;
+	padding: 15px 40px; /*me permite separar el texto da liña do botón: 15px arriba/abaixo e 40px esquerda, dereita*/
+	letter-spacing: 1px; /*separación entre letras*/
+	font-family: 'Dela Gothic One', sans-serif;
+}
+
+.btn-outline {
+	background: transparent;
+	border: 1px solid #fff; /*color blanco*/
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
+}
+
+.btn-outline:hover { /*cando pase o ratón por encima que me cambie os cores de fondo e das letras*/
+	background: #fff; /*cor branco en Hex*/
+	color: #828282;;/*cor negro en Hex*/
+}
+
+.title-big {
+	margin: auto;
+	background-color: rgba(177, 105, 179, 0.7);  
+	max-width: 500px;
+	border-radius: 5mm;
+	padding-top: 50px;
+	-webkit-text-stroke-width: 1px; 
+	-webkit-text-stroke-color: black; 
+}
+
+/* Navbar */
+#navbar {
+	overflow: auto; /*define o que fai se o tamaño e moi grande*/
+	padding-top: 20px;
+	padding-bottom: 20px;
+	position: fixed;
+	background: rgb(152,146,252);
+	background: linear-gradient(90deg, rgba(152,146,252,1) 0%, rgba(69,145,204,1) 53%, rgba(255,181,139,1) 100%);
+	width: 1950px;
+	height: 100px;
+	margin: 0px;
+	border-bottom: 1mm ridge rgba(104, 50, 133, .4);
+}
+
+.container-nav {
+	margin-left: 100px;
+	max-width: 1700px;
+	overflow: auto;
+	padding: 0 20px;
+}
+
+#navbar a {
+	color: #000; /*cor do enlace de cor negro*/
+}
+
+#navbar .logo {
+	float: left; 
+	position:absolute;
+	padding-top: 5px;
+}
+	
+#navbar .logopng {
+	float: left; 
+	position:absolute;
+	padding-top: 5px;
+}
+#navbar	.logopng:hover {
+  opacity:0;
+}
+
+#navbar img {
+	height: 100px;
+}
+
+#navbar ul {
+	list-style: none; /*lle quitamos os puntos a lista non ordeada*/
+	float: right; /*mandamos o menú a dereita do contenedor*/
+	margin-top: 30px;
+
+}
+
+#navbar ul li {
+	float: left; /*en vez de listarse os list items, (li) en vertical, se teñen que poñer xuntos na mesma liña*/ 
+	
+}
+
+#navbar ul li a { 
+	display: block;
+	padding-top: 0px;
+	padding-left: 20px;
+	text-align: center;
+	font-size: 26px;
+	font-family: 'Dela Gothic One', sans-serif;
+	color:#383e5c;
+}
+
+.secreto {
+opacity: 0;
+transition-duration: 0.6s;
+}
+
+.secreto:hover{
+opacity: 100;
+transition-duration: 0.6s;
+filter: brightness(175%);
+}
+
+#showcase {
+ 	background-image: url("img/fondo2.png");
+ 	background: ;background-repeat: no-repeat;
+   background-attachment: fixed;
+	background-position: center;
+	background-size: cover; /*Scales the image (while preserving its ratio) to the smallest possible size to fill the container*/
+	height: 550px; /*altura da foto principal*/
+	text-align: center;
+	padding: 100px;
+	border-bottom: 4mm ridge rgba(104, 50, 133, .8);
+	border-bottom-left-radius: 4mm;
+	border-bottom-right-radius: 4mm;
+
+}
+#showcase .btn {
+	margin-top: 180px;   /*distancia dende enriba para poñer o botón de proxectos na foto principal*/
+}
+
+/* Projects */
+#projects {
+	padding: 80px 0;
+}
+
+
+.container-aaa {
+	margin-left: 20px;
+	margin-top: 10px;
+	max-width: 1750px; 
+	overflow: auto;
+	padding: 0 20px; 
+}
+
+.container-bbb{
+	float: right;
+	margin-top: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	font-family: 'Quicksand', sans-serif;
+	background-color: rgba(98, 143, 240, 0.7);
+ 	border-radius: 30px;
+ 	text-align: center;
+}
+
+
+.projects-row {
+	display: flex;
+	margin-left: 00px;
+	float: left;
+ 	margin-top: 50px;
+
+	/*crea un display axustando as fotos nunha liña, se non o utilizo se ven en filas*/
+}
+
+.projects-row img {
+ 	border-radius: 30px;
+}
+
+.projects-row-detail {
+	display: flex;
+ 	border solid transparent;
+ 	border-radius: 30px;
+ 	padding: 10px;
+ 	margin: auto;
+ 	margin-right: 20px;
+ 	margin-top: 60px;
+ 	margin-left: 10px;	
+	background-color: rgba(240, 193, 98, 0.7);
+ }
+
+
+.projects-row-detail2 {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+ 	border solid transparent;
+ 	border-radius: 30px;
+ 	padding: 10px;
+	background-color: rgba(240, 193, 98, 0.7);
+}
+
+.projects-row-detail2 img {
+	padding-top: 0px;
+}
+
+/* About */
+#about {
+	padding: 80px 0;
+}
+
+.about-row {
+	display: flex;
+}
+
+.about-row-experience {
+	width: 50%;/*a mitad da pantalla*/
+	padding-left: 50px;
+	max-width: 500px;
+	background: rgba(98, 143, 240, 0.7);
+	border-radius: 30px;
+}
+.about-row-me p,
+.about-row-experience p{
+	font-family: 'Quicksand', sans-serif;
+}
+
+.about-row-me {
+	width: 50%;/*a mitad da pantalla*/
+	padding-left: 50px;
+	float: right;
+	max-width: 500px;
+	background: rgba(98, 143, 240, 0.7);
+	margin-left: 200px;
+	border-radius: 30px;
+}
+
+
+/* Contact */
+#contact {
+	padding: 100px;
+	position: fixed;
+	bottom:-10%;
+	right: -5%;
+	text-align: right;
+}
+
+.contact-row {
+	display: flex;
+	background-color: rgba(200, 200, 200, 0.7);
+	width: 600px;
+	padding-top: 10px;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-radius: 30px;
+}
+.contact-row-icon {
+	width: 33%;
+	text-align: center;
+}
+
+.contact-row-icon img {
+	height: 60px;
+}
+
+/* Footer */
+#mainfooter {
+	background: rgba(60, 60, 60, 0.8);
+	text-align: center;
+	padding: 0px;
+}
+
+.inst {
+height: 80px;
+transition-duration: 0.25s; 
+}
+
+.inst:hover {
+height: 100px;
+filter: brightness(1.3);
+transition-duration: 0.25s; 
+}
+
+/* código botón*/
+input[type='checkbox']	 {
+  display: none;
+}
+
+.lbl-toggle {
+  display: block;
+	font-weight: bold;
+	font-size: 14px;
+	font-family: 'Dela Gothic One', sans-serif;
+	color: #828282;
+	text-transform: uppercase;
+	width: 50px;
+	margin-left: 600px;
+   border-color: linear-gradient(90deg, rgba(43,30,255,1) 0%, rgba(63,63,249,1) 31%, rgba(95,205,227,1) 100%);
+
+  padding: 0.7rem;
+
+  color: #d5e5f5;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+  transition: all 0.25s ease-out;
+}
+
+.lbl-toggle:hover {
+  color: #f0fcff;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+
+
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.collapsible-content {
+  max-height: 0px;
+  float: right;
+  overflow: hidden;
+  padding-top: 0px;
+  float: right;
+
+  transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 200px;
+  }
+
